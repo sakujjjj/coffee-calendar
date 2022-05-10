@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
+
+.header{
+    background: linear-gradient(347.27deg, #e2d7c6 -101.33%, #e2d7c6 42.43%);
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+}
+.coffeeBeans{
+    /* height: 10px; */
+    width: 10px;
+    margin-top: 5px;
+    align-items: center ;
+}
+.title{
+    font-size: 1.2rem;
+}
+body{
+    background-color: #F4F5ED;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+}
+.container{
+    /* background-color: blue; */
+    width: 84%;
+    margin: auto;
+    padding: 30px 0 10px 0;
+    max-width: 1200px;
+}
+.sub{
+    /* background-color: red; */
+    grid-area:sub;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    
+    letter-spacing: 2px; 
+
+}
+.city{
+    /* background-color: brown; */
+    grid-area:city;
+    writing-mode: vertical-lr;
+    font-size: 40px;
+    letter-spacing: 10px;
+    
+    /* display: block; */
+    cursor: pointer;
+}
+.dataWeather{
+    /* background-color: aqua; */
+    grid-area:dataWeather;
+    font-size: 15px;
+    /* line-height: 120px; */
+    align-self: center;
+    border-top: 3px solid black;
+    border-bottom: 1px solid black;
+    /* justify-self: center; */
+}
+.dataMon{
+    grid-area: Mon;
+    font-size: 40px;
+    
+}
+.dataMon::after{
+    content:"月" ;
+    font-size: 1rem;
+    
+}
+.dataDate{
+    grid-area: Date;
+    font-size: 90px;
+    /* margin-left: 0px; */
+}
+.goodtodrink{
+    background-color:#e2d7c6;
+    grid-area: goodtodrink;
+    font-size: 20px;
+    
+    border-radius: 50px;
+    padding: 5px 10px;
+    line-height: 40px;
+    padding-right: 10px;
+    
+    float: right;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+}
+.goodtodrink::before{
+    /* float: left; */
+    content: "宜";
+    font-size: 20px;
+    padding-left: 0px;
+    /* text-align: left; */
+}
+.badtodo{
+    grid-area:bad;
+    font-size: 15px;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    margin-top: 10px;
+
+}
+.badtodo::before{
+    display: flex;
+    content: "忌";
+}
+.main{
+    /* background-color: black; */
+    display: grid;
+    /* grid-template-rows: 100px 100px 100px 100px ; */
+    grid-auto-rows: auto;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    grid-template-areas: 'sub sub sub sub'
+    'city . dataWeather dataWeather'
+    '. . dataWeather dataWeather'
+    '. Mon Date .'
+    'goodtodrink goodtodrink goodtodrink goodtodrink'
+    '. bad bad .';
+    /* grid-row-gap: 20px; */
+}
